@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng ký học viện</title>
+    <style>
+        body{
+            background-color: burlywood;
+        }
+        h1{
+            background-color: aqua;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .form{
+            background-color: antiquewhite;
+            width: 700px;
+            margin: 30px auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="form">
+    <form>
+        <h1>ĐĂNG KÝ HỌC VIÊN</h1>
+        <table>
+            <tr>
+                <th>Họ và tên</th>
+                <td><input type="text"name="hovaten"></td>
+            </tr>
+            <tr>
+                <th>Ngày Sinh</th>
+                <td><input type="date"name="date"></td>
+            </tr>
+            <tr>
+                <th>Giới tính</th>
+                <td><input type="radio"name="date">Nam
+                    <input type="radio"name="date">Nữ</td>
+            </tr>
+            <tr>
+                <th>Địa chỉ</th>
+                <td><input type="textarea"name="place"></td>
+            </tr>
+            <tr>
+                <th>Chọn Lớp</th>
+                <td><select>
+                    <option>12A1</option>
+                    <option>12A2</option>
+                    <option>12A3</option>
+                    <option>12A4</option>
+                    <option>12A5</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>email</th>
+                <td><input type="email"name="email"></td>
+            </tr>
+            <tr>
+                <th>Điện thoại</th>
+                <td><input type="tel"name="phone"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="submit"name="submit"value="Đăng ký">
+                    <input type="reset"name="reset"value="Nhập lại">
+                </td>
+            </tr>
+        </table>
+    </form>
+</div>
+</body>
+</html>
