@@ -1,5 +1,84 @@
-h1{
-color: black;
-background-color: antiquewhite;
+h1 {
+  color: black;
+  background-color: antiquewhite;
+}
 
+.logo {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(224, 96, 186);
+}
+
+.sticky-menu {
+  position: sticky;
+  background-color: rgb(230, 93, 177);
+  top: 0px;
+  width: 100%;
+  text-align: center;
+}
+
+.sticky-menu ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.sticky-menu ul li {
+  margin: 0 30px;
+  font-size: 20px;
+}
+
+.sticky-menu ul li a {
+  color: rgb(241, 224, 224);
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+  display: block;
+}
+
+.container {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.left {
+  width: 30%;
+}
+
+.right {
+  width: 70%;
+}
+
+.left img {
+  width: 100%;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.right video {
+  width: 100%;
+}
+
+.right video.active {
+  display: block;
+}
+
+.left p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.right p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+#footer {
+  background-color: rgb(233, 134, 200);
+  color: rgb(158, 24, 58);
+  text-align: center;
+  font-size: 17px;
 }
