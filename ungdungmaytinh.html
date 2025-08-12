@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <input type="number"id="num1"value="10"step="any">
+        <input type="number"id="num2"value="10"step="any">
+        <button type="button"id="addBtn">addittion(+)</button>
+        <button type="button"id="subBtn">subtraction(-)</button>
+        <button type="button"id="mulBtn">multiplication(x)</button>
+        <button type="button"id="divBtn">division(/)</button>
+    </form>
+    <p id="result"></p>
+    <script>
+        function getValues(){
+            const a=parseFloat(document.getElementById('num1').value);
+            const b=parseFloat(document.getElementById('num2').value);
+            return {a,b};
+        }
+        function addition() {
+            const { a, b } = getValues();
+            document.getElementById('result').textContent = `Result Addition: ${a + b}`;
+        }
+
+        function subtraction() {
+            const { a, b } = getValues();
+            document.getElementById('result').textContent = `Result Subtraction: ${a - b}`;
+        }
+
+        function multiplication() {
+            const { a, b } = getValues();
+            document.getElementById('result').textContent = `Result Multiplication: ${a * b}`;
+        }
+
+        function division() {
+            const { a, b } = getValues();
+            if (b === 0) {
+                document.getElementById('result').textContent = 'Không thể chia cho 0';
+                return;
+            }
+            document.getElementById('result').textContent = `Result Division: ${a / b}`;
+        }
+        document.getElementById('addBtn').addEventListener('click', addition);
+        document.getElementById('subBtn').addEventListener('click', subtraction);
+        document.getElementById('mulBtn').addEventListener('click', multiplication);
+        document.getElementById('divBtn').addEventListener('click', division);
+
+    </script>
+</body>
+</html>

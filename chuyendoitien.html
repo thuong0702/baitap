@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="convFrom" onsubmit="return false;">
+<div>Amount
+    <input type="number" id="amount" value="1" step="any">
+</div>
+<div>From  Currency
+    <select id="fromCurrency">
+        <option value="VND">Việt Nam</option>
+        <option value="USD">USD</option>
+    </select>
+</div>
+<div>To Currency
+    <select id="toCurrency">
+        <option value="USD">USD</option>
+        <option value="VND">VND</option>
+    </select>
+</div>
+<button type="button"id="convertBtn">Convert</button>
+<p id="result"></p>
+    </form>
+    <script>
+        const ratesInVND ={
+            VND:1,
+            USD:24000,
+        };
+        function convertCurrency(){
+            const amount = parseFloat(document.getElementById('amount').value);
+            const from = document.getElementById('fromCurrency').value;
+            const to= document.getElementById('toCurrency').value;
+            if (isNaN(amount) || amount <0){
+                document.getElementById('result').textContent ='vui lòng nhập số hợp lệ ';
+                return;
+            }
+            const amountInVND = amount * ratesInVND[from];
+            const result= amountInVND / ratesInVND[to];
+            document.getElementById('result').textContent = `Result: ${result} ${to}`;
+        }
+        document.getElementById('convertBtn').addEventListener('click',convertCurrency);
+    </script>
+</body>
+</html>
