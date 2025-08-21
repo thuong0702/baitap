@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chuyển từ mét sang feet</title>
+</head>
+<body>
+    <script>
+        let input = prompt("Nhập chiều dài (m):");
+        let metter = parseFloat(input);
+        if (!isNaN(metter)) {
+            let feet = metter * 3.28084;
+            alert("Chiều dài tương ứng ở feet là: " + feet.toFixed(2));
+        } else {
+            alert("Vui lòng nhập một số hợp lệ.");
+        }
+    </script>
+</body>
+</html>

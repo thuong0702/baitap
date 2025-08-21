@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính diện tích mét vuông khi biết cạnh a</title>
+</head>
+<body>
+    <script>
+let input = prompt("Nhập cạnh a:");
+let a=parseFloat(input);
+if (!isNaN(a) && a > 0){
+    alert("Diện tích hình vuông là: " + (a * a).toFixed(2));
+} else {    
+    alert("Vui lòng nhập một số hợp lệ lớn hơn 0.");
+}
+    </script>
+</body>
+</html>
