@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Trò chơi Đoán Số</title>
+</head>
+<body>
+  <button onclick="startGame()">Chơi</button>
+
+  <script>
+    function startGame() {
+      const rangeInput = prompt("Nhập khoảng số bạn muốn đoán (ví dụ: 1-100):");
+      if (!rangeInput) return;
+
+      const parts = rangeInput.split("-");
+      if (parts.length !== 2) {
+        alert("Định dạng không hợp lệ. Vui lòng nhập theo dạng 'số nhỏ - số lớn'.");
+        return;
+      }
+
+      const min = parseInt(parts[0]);
+      const max = parseInt(parts[1]);
+      if (isNaN(min) || isNaN(max) || min >= max) {
+        alert("Khoảng số không hợp lệ.");
+        return;
+      }
+
+      const target = Math.floor(Math.random() * (max - min + 1)) + min;
+      let guess;
+      do {
+        const guessInput = prompt(`Đoán một số từ ${min} đến ${max}:`);
+        if (guessInput === null) return; // Người dùng hủy bỏ
+        guess = parseInt(guessInput);
+        if (isNaN(guess)) {
+          alert("Vui lòng nhập một số hợp lệ.");
+        } else if (guess < target) {
+          alert("Số bạn đoán nhỏ hơn.");
+        } else if (guess > target) {
+          alert("Số bạn đoán lớn hơn.");
+        } else {
+          alert("🎉 Chúc mừng! Bạn đã đoán đúng!");
+        }
+      } while (guess !== target);
+    }
+  </script>
+</body>
+</html>
