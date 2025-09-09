@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+// <!-- Bài 1:
+// Viết chương trình khởi tạo mảng 2 chiều với một bộ phần tử có sẵn, sau đó in ra các phần tử trong mảng.
+
+// Yêu cầu: Sử dụng vòng lặp for lồng nhau. -->
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+];  
+for(let i = 0; i < matrix.length; i++) {
+    for(let j = 0; j < matrix[i].length; j++) {
+        document.write(matrix[i][j] + " ");
+    }
+    document.write("<br>");
+}
+// Bài 2:
+// Viết chương trình in các ký tự trong một mảng theo thứ tự đảo ngược.
+
+// Ví dụ:
+// Với mảng [ 'c', 's', 'c', '2', '6', '1' ], sau khi đảo ngược sẽ là: "162csc".
+let chars = ['c', 's', 'c', '2', '6', '1'];
+let reversedStr = "";
+for(let i = chars.length - 1; i >= 0; i--) {
+    reversedStr += chars[i];
+}
+document.write("Chuỗi đảo ngược: " + reversedStr);
+// Bài 3:
+// Viết chương trình khai báo một mảng ký tự và kích thước của mảng.
+
+// Yêu cầu: Đếm số ký tự số (0-9) trong mảng.
+let charArray = ['a', '1', 'b', '2', 'c', '3', 'd', '4'];
+let digitCount = 0;
+for(let i = 0; i < charArray.length; i++) {
+    if(charArray[i] >= '0' && charArray[i] <= '9') {
+        digitCount++;
+    }
+}
+// Bài 4:
+// Viết chương trình đếm số từ trong một chuỗi.
+let str = "This is a sample string with several words";
+let words = str.split(" ");
+document.write("<br>Số từ trong chuỗi: " + words.length);
+// Bài 5:
+// Viết chương trình nhập vào 2 chuỗi, kiểm tra xem hai chuỗi có giống nhau không.
+let str1 = "hello";
+let str2 = "hello";
+if(str1 === str2) {
+    document.write("<br>Hai chuỗi giống nhau");
+} else {
+    document.write("<br>Hai chuỗi khác nhau");
+}
+// Bài 6:
+// Viết chương trình nhập vào một mảng ký tự, tìm tất cả các ký tự '-' trong mảng và thay thế chúng bằng ký tự '_'.
+let charArr = ['a', '-', 'b', '-', 'c', '-'];
+for(let i = 0; i < charArr.length; i++) {
+    if(charArr[i] === '-') {
+        charArr[i] = '_';
+    }
+}       
+document.write("<br>Mảng sau khi thay thế: " + charArr.join(", "));
+</script>
+</body>
+</html>

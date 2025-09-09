@@ -106,6 +106,16 @@ arrSort.sort(function(a, b) {
 });
 document.write("<br>Mảng sau khi sắp xếp giảm dần: " + arrSort.join(", "));
 
+// Bài 9
+// Viết chương trình khởi tạo hoặc nhập vào hai mảng số nguyên gồm 10 phần tử (gọi là mảng a và b).
+
+// Tạo mảng c gồm 20 phần tử.
+// Chương trình sẽ lưu các phần tử được nối từ hai mảng b và a vào mảng c.
+// Hiển thị mảng c.
+let a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let b = [11, 12, 13, 14, 15, 16, 17, 18, 19, 20];
+let c = a.concat(b);
+document.write("<br>Mảng c (nối từ a và b): " + c.join(", "));
 </script>
 </body>
 </html>
