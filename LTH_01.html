@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         Bài 1:
+// Tạo hàm alertMessage() hiển thị hộp thoại chứa chuỗi "Xin chào". Gọi hàm từ trong phần <body> của trang web.
+    function alertMessage() {
+        alert("Xin chào");
+    }
+    alertMessage();
+//     Bài 2:
+// Tạo hàm nhận vào một đối số dạng số, tăng giá trị của đối số lên 1 và trả về giá trị sau khi tăng. Gọi hàm từ trong phần <body> của trang web và hiển thị kết quả lên màn hình.
+    function num(a) {
+        return a + 1;
+    }
+    document.writeln(num(5));
+
+//     Bài 3:
+// Tạo hàm nhận vào hai tham số:
+
+// Nếu giá trị của tham số thứ nhất lớn hơn tham số thứ hai, hiển thị hộp thoại thông báo cho người dùng.
+// Nếu giá trị của tham số thứ nhất nhỏ hơn hoặc bằng tham số thứ hai, trả về tổng của hai tham số.
+    function compareAndSum(a, b) {
+        if (a > b) {
+            alert("Tham số thứ nhất lớn hơn tham số thứ hai");
+        } else {
+            return a + b;
+        }
+    }
+    document.writeln(compareAndSum(3, 5));  
+    // Bài 4
+    function addNumbers() {
+    firstNum = 4;
+    secondNum = 8;
+    result = firstNum + secondNum;
+    return result;
+}
+result = 0;
+alert(result); 
+result = addNumbers();
+alert(result); 
+
+    // Bài 5
+    const stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+    const constellations = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+    function findConstellation(starName) {
+        for (let i = 0; i < stars.length; i++) {
+            if (stars[i].toLowerCase() === starName.toLowerCase()) {
+                return constellations[i];
+            }
+        }
+        return null;
+    }
+
+    const userInput = prompt("Nhập tên ngôi sao:");
+    const result = findConstellation(userInput);
+
+    if (result) {
+        document.writeln("Chòm sao tương ứng: " + result);
+    } else {
+        document.writeln("Không tìm thấy ngôi sao này!");
+    }
+
+    </script>
+</body>
+</html>

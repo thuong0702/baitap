@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+//         <!-- bài1 Tính bình phương:
+
+// Viết hàm tính bình phương của một số bất kỳ được đưa vào.
+// Gọi và kiểm tra hàm vừa viết. -->
+        function square(num) {
+            return num * num;
+        }
+
+       
+        let number = 5; 
+        let result = square(number);
+        document.writeln("Bình phương của " + number + " là: " + result);
+//      Bài 2 Tính diện tích và chu vi hình tròn:
+
+// Viết hàm tính diện tích hình tròn.
+// Viết hàm tính chu vi hình tròn.
+// Gọi và kiểm tra các hàm vừa viết.
+        function circleArea(radius) {
+            return Math.PI * radius * radius;
+        }
+
+        function circleCircumference(radius) {
+            return 2 * Math.PI * radius;
+        }
+
+        let radius = 7; 
+        document.writeln("Diện tích hình tròn với bán kính " + radius + " là: " + circleArea(radius));
+        document.writeln("Chu vi hình tròn với bán kính " + radius + " là: " + circleCircumference(radius));
+    </script>
+</body>
+</html>
