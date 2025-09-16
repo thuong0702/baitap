@@ -36,6 +36,42 @@
         let radius = 7; 
         document.writeln("Diện tích hình tròn với bán kính " + radius + " là: " + circleArea(radius));
         document.writeln("Chu vi hình tròn với bán kính " + radius + " là: " + circleCircumference(radius));
+//     Bài 3    Tính giai thừa:
+
+// Viết hàm tính giai thừa của một số nguyên bất kỳ được đưa vào.
+// Gọi và kiểm tra hàm vừa viết.
+        function factorial(n) {
+            if (n < 0) return undefined; 
+            if (n === 0 || n === 1) return 1; 
+            let result = 1;
+            for (let i = 2; i <= n; i++) {
+                result *= i;
+            }
+            return result;
+        }
+
+        let num = 5; 
+        document.writeln("Giai thừa của " + num + " là: " + factorial(num));
+//     Bài 5    Kiểm tra ký tự số:
+
+// Viết hàm kiểm tra xem ký tự nhập vào có phải là ký tự số hay không.
+// Nếu là ký tự số, hàm trả về true; ngược lại trả về false.
+        function isDigit(char) {
+            return char >= '0' && char <= '9';
+        }
+
+        let char = '5'; 
+        document.writeln("Ký tự '" + char + "' là ký tự số: " + isDigit(char));
+
+//  Bài 6   Tìm số nguyên nhỏ nhất:
+
+// Viết hàm nhận vào 3 số nguyên bất kỳ, trả về số nguyên có giá trị nhỏ nhất.
+function findMin(a, b, c) {
+    return Math.min(a, b, c);
+}
+let a = 10, b = 5, c = 8;
+document.writeln("Số nguyên nhỏ nhất trong (" + a + ", " + b + ", " + c + ") là: " + findMin(a, b, c)); 
+
     </script>
 </body>
 </html>
