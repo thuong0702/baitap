@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Rectangle Example</title>
+</head>
+<body>
+  <canvas id="myCanvas" width="400" height="300" style="border:1px solid black;"></canvas>
+  <p id="info"></p>
+
+  <script>
+    class Rectangle {
+      constructor(length, width) {
+        this.length = length;
+        this.width = width;
+      }
+    
+      getArea() {
+        return this.length * this.width;
+      }
+
+      getPerimeter() {
+        return 2 * (this.length + this.width);
+      }
+
+      draw(ctx, x, y) {
+        ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+        ctx.strokeRect(x, y, this.length, this.width);
+      }
+    }
+
+    let rect = new Rectangle(100, 60);
+   
+    let canvas = document.getElementById("myCanvas");
+    let ctx = canvas.getContext("2d");
+    rect.draw(ctx, 50, 50);
+
+    document.getElementById("info").innerHTML =
+      "Diện tích: " + rect.getArea() + "<br>" +
+      "Chu vi: " + rect.getPerimeter();
+
+    rect.length = 150;
+    rect.width = 90;
+    rect.draw(ctx, 50, 50);
+
+    document.getElementById("info").innerHTML +=
+      "<br><br>Sau khi thay đổi:<br>" +
+      "Diện tích: " + rect.getArea() + "<br>" +
+      "Chu vi: " + rect.getPerimeter();
+  </script>
+</body>
+</html>

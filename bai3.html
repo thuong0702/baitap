@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Apple{
+            constructor(weight){
+                this.weight = weight;
+
+            }
+            getWeight(){
+                return this.weight;
+            }
+            setWeight(weight){
+                this.weight = weight;
+            }
+            isHeavy(){
+                return this.weight > 0;
+            }
+            decrease(){
+                if(this.weight > 0){
+                    this.weight--;
+                }
+            }
+
+        }
+        class Human{
+            constructor(name,gender,weight){
+                this.name = name;   
+                this.gender =gender;
+                this.weight = weight;
+            }
+            getName(){
+                return this.name;
+            }
+            setName(name){
+                this.name = name;
+            }
+            getGender(){
+                return this.gender=gender;
+            }
+            setGender(){
+                return this.gender=gender;
+            }
+            getWeight(){
+                return this.weight;
+            }
+            setWeight(weight){
+                this.weight = weight;
+            }
+            eat(apple){
+                if(apple.isHeavy()){
+                    apple.decrease();
+                    this.weight++;
+                    document.write(`${this.name} ăn táo. Cân nặng: ${this.weight}, Khối lượng táo còn lại: ${apple.getWeight()}<br>`);
+                }else{
+                    document.write("Apple is empty!<br>");
+                }
+            }
+    }
+    let apple = new Apple(10);
+    let adam = new Human("Adam","Nam",60);
+    let eva = new Human("Eva","Nữ",50);
+    document.write(`Khối lượng táo ban đầu: ${apple.getWeight()}<br>`);
+    for(let i=0;i<6;i++){
+        adam.eat(apple);
+    }
+    for(let i=0;i<5;i++){
+        eva.eat(apple);
+    }
+    document.write(`Khối lượng táo còn lại: ${apple.getWeight()}<br>`);
+    document.write(`Cân nặng Adam: ${adam.getWeight()}<br>`);
+    document.write(`Cân nặng Eva: ${eva.getWeight()}<br>`);
+
+    </script>
+</body>
+</html>

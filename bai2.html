@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Temperature {
+    #celsius; 
+
+    constructor(celsius) {
+        if (celsius < -273) throw new Error("Nhiệt độ không thể nhỏ hơn -273°C");
+        this.#celsius = celsius;
+    }
+
+    getCelsius() {
+        return this.#celsius;
+    }
+
+    setCelsius(value) {
+        if (value < -273) throw new Error("Nhiệt độ không thể nhỏ hơn -273°C");
+        this.#celsius = value;
+    }
+
+    toFahrenheit() {
+        return this.#celsius * 9/5 + 32;
+    }
+
+    toKelvin() {
+        return this.#celsius + 273.15;
+    }
+}
+
+let temp = new Temperature(25); 
+
+console.log("Nhiệt độ (°C): " + temp.getCelsius());
+console.log("Nhiệt độ (°F): " + temp.toFahrenheit());
+console.log("Nhiệt độ (K): " + temp.toKelvin());
+temp.setCelsius(30);
+console.log("Nhiệt độ mới (°C): " + temp.getCelsius());
+
+
+    </script>
+</body>
+</html>
