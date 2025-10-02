@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #fff;
+  background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20230425/pngtree-sakura-background-image_2499445.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 220px;
+  height: 100%;
+  background-color: #f8bbd0; /* hồng phấn */
+  padding: 20px;
+  color: white;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.1);
+}
+
+.sidebar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.sidebar a:hover {
+  background-color: #f48fb1;
+}
+
+/* Main */
+.main {
+  margin-left: 240px;
+  padding: 20px;
+  color: #333;
+}
+
+/* Card thống kê */
+.card-stat {
+  background-color: #fce4ec;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.card-stat p {
+  font-size: 20px;
+  color: #e91e63;
+}
+
+/* Bảng sản phẩm */
+.table-pink {
+  background-color: #f8bbd0;
+  color: white;
+}
+
+.table img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Nút */
+.btn-edit {
+  background-color: #f8bbd0;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+.btn-edit:hover {
+  background-color: #f48fb1;
+}
+
+.btn-delete {
+  background-color: #e57373;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 6px;
+  color: white;
+  cursor: pointer;
+}
+.btn-delete:hover {
+  background-color: #ef5350;
+}
