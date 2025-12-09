@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 class StudentInfoComponent extends Component {
-  // Bước 4: khởi tạo dữ liệu demo
   constructor(props) {
     super(props);
     this.state = {
@@ -31,7 +30,7 @@ class StudentInfoComponent extends Component {
 
           <tbody>
             {
-              // Bước 5: sử dụng map để binding dữ liệu
+        
               this.state.students.map((sv) => (
                 <tr key={sv.id}>
                   <td>{sv.id}</td>
