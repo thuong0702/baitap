@@ -1,0 +1,22 @@
+{
+  "products": [
+    {
+      "id": "2",
+      "name": "Phone 11",
+      "description": "Iphone 11 mới 99%",
+      "price": 15000000
+    },
+    {
+      "id": "834b",
+      "name": "iphone 10",
+      "price": "500000000",
+      "description": "đẹp"
+    },
+    {
+      "id": "c7bc",
+      "name": "android",
+      "price": "250000",
+      "description": "pin trâu, màn mỏng"
+    }
+  ]
+}
